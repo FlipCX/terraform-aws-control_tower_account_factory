@@ -198,6 +198,11 @@ variable "aft_feature_delete_default_vpcs_enabled" {
 # AFT Customer VCS Variables
 #########################################
 
+variable "disable_vcs_pipeline" {
+  description = "Enable this if you want to handle the CICD pipeline yourself via something like Github Actions"
+  type = bool
+  default = false
+}
 
 variable "vcs_provider" {
   description = "Customer VCS Provider - valid inputs are codecommit, bitbucket, github, githubenterprise, gitlab, or gitLab self-managed"
